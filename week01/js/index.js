@@ -1,7 +1,3 @@
-const popAlert=() =>{
-    alert('만나서 반갑습니다~!^^')
+const alertPoet = () => {
+    alert('윤동주')
 }
-
-//   function popAlert() {
-//       alert("만나서 반가워요~!")
-//   }

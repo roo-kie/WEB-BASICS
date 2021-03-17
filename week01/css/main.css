@@ -1,6 +1,33 @@
-p{
-    font-size: 60px;
-    font-weight: 900;
-    text-align: center;
-    color:rgb(47, 131, 209)
+body {
+    padding: 4rem;
+    white-space: nowrap;
+}
+
+.poem {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    width: 50%;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 800;
+    color:rgb(23, 52, 105)
+}
+
+.text {
+    width: 50%;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color:rgb(107, 137, 190)
+}
+
+.caluse {
+    margin-bottom: 3.5rem;
 }
