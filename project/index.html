@@ -11,7 +11,12 @@
     <link rel="icon" href="./favicon.ico"/>
     <!-- 구글 폰트: main.css보다 먼저 불러올 수 있도록 한다 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <!-- 구글 아이콘 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <!-- 각 브라우저의 기본 스타일을 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <!-- main.css -->
@@ -19,22 +24,1132 @@
 </head>
 
 <body>
-<header>
-    <!-- 네이버링크 -->   
-     <a id="naver" class="link-icons" href="https://www.naver.com/" title="NAVER">
-        NAVER
-    </a>
-    <a id="webtoon" class="link-icons" href="https://comic.naver.com/index.nhn" title="만화">
-        만화
-    </a>
-    <em class="bar">|</em>
-    <a id="novel" class="link-icons" href="https://novel.naver.com/webnovel/weekday.nhn" title="웹소설">
-        웹소설
-    </a>
-    <style type="text/css"> 
-        a { text-decoration:none } 
-    </style> 
-</header>
+    <div id="wrap">
+        <!-- 헤더와 메뉴를 감싸는 태그~ -->
+        <div id="header_wrap">
+            <!-- 헤더 -->
+            <div id="header">
+                <!-- 로그인과 메뉴버튼 -->
+                <div id="gnb"> 
+                    <ul class="gnb_lst" id="gnb_lst" style="display: block;">
+                        <li class="gnb_login_li" id="gnb_login_layer" style="display: inline-block;">
+                            
+                            <a class="gnb_btn_login" href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fcomic.naver.com%2Findex.nhn" id="gnb_login_button">
+                                <span class="gnb_bg"> </span>
+                                <span class="gnb_bdr"> </span>
+                                <span class="gnb_txt">로그인</span>
+                            </a>
+                        </li>
+                        <li class= "gnb_service_li" id="gnb_service_layer" style="display: inline-block;">
+                            <span class="material-icons" id="icon_apps">
+                                apps
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 사이드메뉴 -->
+                <div id="snb_wrap">
+                    <!-- 제목태그 -->
+                    <h1>
+                        <a id="link_naver" href="https://www.naver.com/" title="NAVER">
+                        NAVER
+                        </a>
+                        <a id="link_comic" href="https://comic.naver.com/index.nhn" title="만화">
+                            만화
+                        </a>
+                        <em class="bar">|</em>
+                        <a id="link_novel" href="https://novel.naver.com/webnovel/weekday.nhn" title="웹소설">
+                            웹소설
+                        </a>
+                    </h1>
+
+                    <!-- 검색창 -->
+                    <form id="searchForm" name="search" method="get" action="/search.hnhttps://comic.naver.com/search.nhn">
+                        <fieldset>
+                            <legend>검색</legend>
+                            <div class="snb_search_box">
+                                <div class="snb_search_box_sub">
+                                    <input type="text" id="keyword" maxlength="18" class="snb_search_text" placeholder="제목/작가로 검색할 수 있습니다."> 
+                                    <div class="material-icons" id="icon_search">
+                                        search
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="notice_info">
+                    <span class="blind"> 공지사항 </span>
+                    <div class="rolling">
+                        <div class="notice_rolling">
+                            <li>
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=770523" title="나를... 새엄마로? &lt;흑막여주가 날 새엄마로 만들려고 해&gt;">
+                                    <span class="material-icons" id="icon_notice">
+                                        announcement
+                                    </span>
+                                    나를... 새엄마로? &lt;흑막여주가 날 새엄마로 만들려고 해&gt;
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 메뉴 -->
+            <div id="menu">
+                <ul class="menu">
+                    <li class="current">
+                        <a href="https://comic.naver.com/index.nhn">
+                            <span class="Ntxt_home">홈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://comic.naver.com/webtoon/weekday.nhn">
+                            <span class="Ntxt_webtoon">웹툰</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://comic.naver.com/genre/bestChallenge.nhn">
+                            <span class="Ntxt_best_challenge">베스트 도전</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://comic.naver.com/genre/challenge.nhn">
+                            <span class="Ntxt_challenge_comic">도전만화</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://comic.naver.com/mypage/favorite.nhn">
+                            <span class="Ntxt_mypage">마이페이지</span>
+                        </a>
+                        <span class="bar"></span>
+                    </li>
+                    <li>
+                        <a href="https://series.naver.com/comic/recommendList.nhn" target="_blank">
+                            <span class="Ntxt_short_story">단행본 만화</span>
+                        </a>
+                    </li>
+                    <li class="genre_novel">
+                        <a href="https://series.naver.com/novel/recommendList.nhn" target="_blank">
+                            <span class="Ntxt_genre_novel">장르소설</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <!-- 상단메인 -->
+        <div class="mainTopArea">
+            <div class="main_spot">
+                <div class="data_area">
+                    <h2 class="Ntxt_today_webtoon">
+                        <p id="tw_black">오늘의</p>
+                        <p id="tw_green">웹툰</p>
+                    </h2>
+                    <p class="date" id="curDate">4월 18일 일요일</p>
+                    <ul id="listMenu">
+                        <li class="sel">
+                            <a href="">
+                                <span class="Ntxt_popular">인기순</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="Ntxt_update">업데이트순</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="Ntxt_count">조회순</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="Ntxt_star_rate">별점순</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="webtoon_area">
+                    <div class="bigimg">
+                        <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=748105&no=84&weekday=sun" class="_bigImgLink">
+                            <img src="/image/bigImg.PNG" width="582" height="195" alt="자까 작가의 나도 혼자 산다" class="_bigImg">
+                            <span class="bd"></span>
+                        </a>
+                    </div>
+                    <div class="webtoon_lst">
+                        <div class="lst_area">
+                            <ul id="comicList" style="margin-left: 0px; width: 7695px;">
+                                <li class="sel">
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=748105&no=84&weekday=sun" class="item">
+                                        <img src="/image/list1.jpg" width="134" height="56" >
+                                        <span class="sel_bar"></span>
+                                    </a>    
+                                </li>
+                                <li>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=736277&no=75&weekday=sun" class="item">
+                                        <img src="/image/list2.jpg" width="134" height="56">
+                                    </a>    
+                                </li>
+                                <li>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=710751&no=136&weekday=sun" class="item">
+                                        <img src="/image/list3.jpg" width="134" height="56" >
+                                    </a>    
+                                </li>
+                                <li>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=670152&no=274&weekday=sun" class="item">
+                                        <img src="/image/list4.jpg" width="134" height="56" >
+                                    </a>    
+                                </li>
+                            </ul>
+                            <a href="" class="btn_prev">
+                                <span class="btn_prev_arr">&lt;</span>
+                            </a>
+                            <a href="" class="btn_next">
+                                <span class="btn_next_arr">&gt;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="todayChallenge">
+                <h4 class="Ntxt_new_best" id="nb_green">새로운</h4>
+                <h4 class="Ntxt_new_best" id="nb_black">베스트 도전만화</h4>
+                <p class="best_photo">
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=766460">
+                        <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/02/03/leemguiny/thumbnail_218x120155c5a71_88a3_467e_9c05_474999c1bb34_00009470.JPEG" width="202" height="110" alt="발푸르기스의 너머">
+                        <span class="mask"></span>
+                    </a>
+                </p>
+                <d1>
+                    <dt>
+                        <a href="" class="challenge_title">
+                            발푸르기스의 너머
+                        </a>
+                        <span>
+                            <a href="#" class="challenge_id">
+                                leemguiny
+                            </a>
+                        </span>
+                    </dt>
+                    <dd class="ellipsis_content" style="height: 54px;">
+                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=766460">
+                            19세기 프로이센, 인간 파우스트를 둘러싼 신과 악마 메피스토펠레스의 내기. 과연 승자는?
+                        </a>
+                    </dd>
+                </d1>
+            </div>
+        </div> 
+        <!-- 본문 -->
+        <div id="container">
+            <div id="content">
+                <!-- 장르별 추천 웹툰 -->
+                <div class="genreRecomBox">
+                    <h3 class="titleMain">
+                        <a id="moreGenre" href="https://comic.naver.com/webtoon/genre.nhn?genre=story">
+                            <span class="Ntxt_genre_webtoon" id="ngw_black">장르별</span>
+                            <span class="Ntxt_genre_webtoon" id="ngw_green">추천웹툰&gt;</span>
+                        </a>
+                    </h3>
+                    <div class="tab_gr">
+                        <ul>
+                            <li>
+                                <a href="" id="episode" title="에피소드">에피소드</a>
+                            </li>
+                            <li>
+                                <a href="" id="omnibus" title="옴니버스">옴니버스</a>
+                            </li>
+                            <li>
+                                <a href="" id="story"  class="on" title="스토리">스토리</a>
+                            </li>
+                            <span class="bar"></span>
+                            <li>
+                                <a href="" id="daily" title="일상">일상</a>
+                            </li>
+                            <li>
+                                <a href="" id="comic" title="개그">개그</a>
+                            </li>
+                            <li>
+                                <a href="" id="fantasy" title="판타지">판타지</a>
+                            </li>
+                            <li>
+                                <a href="" id="action" title="액션">액션</a>
+                            </li>
+                            <li>
+                                <a href="" id="drama" title="드라마">드라마</a>
+                            </li>
+                            <li>
+                                <a href="" id="pure" title="순정">순정</a>
+                            </li>
+                            <li>
+                                <a href="" id="sensibility" title="감성">감성</a>
+                            </li>
+                            <li>
+                                <a href="" id="thrill" title="스릴러">스릴러</a>
+                            </li>
+                            <li>
+                                <a href="" id="historical" title="시대극">시대극</a>
+                            </li>
+                            <li>
+                                <a href="" id="sports" title="스포츠">스포츠</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="view_type">
+                        <ul class="sortby">
+                            <li>
+                                <a href="" id="User">
+                                    <span class="Ntxt_popular">인기순</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" id="Update">
+                                    <span class="Ntxt_update">업데이트순</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" id="ViewCount">
+                                    <span class="Ntxt_count">조회순</span>
+                                </a>
+                            </li>
+                            <li class="sel">
+                                <a href="" id="StarScore">
+                                    <span class="Ntxt_star_rate">별점순</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul id="genreRecommand" class="genreRecom">
+                        <li>
+                            <div class="genreRecomImg2">
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=718020">
+                                    <img src="https://shared-comic.pstatic.net/thumb/webtoon/718020/thumbnail/thumbnail_IMAG04_9c987493-afe8-4747-affd-d720ebe5c96e.jpg" width="218" height="120" title="귀곡의 문" alt="귀곡의 문">
+                                </a>
+                            </div>
+                            <div class="genreRecomInfo2">
+                                <h6 class="title">
+                                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=718020">
+                                        <span>귀곡의 문</span>
+                                    </a>
+                                </h6>
+                                <p>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=718020&no=132">
+                                    <span>132화 우선순위</span>
+                                </a>
+                                </p>
+                                <span class="user">
+                                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=314115">
+                                        삼촌
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="genreRecomImg2">
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=703630">
+                                    <img src="https://shared-comic.pstatic.net/thumb/webtoon/703630/thumbnail/thumbnail_IMAG04_8ebb6a97-c944-4ac5-bd1a-7d254cb5d66d.jpg" width="218" height="120" title="어글리후드" alt="어글리후드">
+                                </a>
+                            </div>
+                            <div class="genreRecomInfo2">
+                                <h6 class="title">
+                                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=703630">
+                                        <span>어글리후드</span>
+                                    </a>
+                                </h6>
+                                <p>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=718020&no=132">
+                                    <span>156. 음모론</span>
+                                </a>
+                                </p>
+                                <span class="user">
+                                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=211590">
+                                        미애
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="genreRecomImg2">
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=746285">
+                                    <img src="https://shared-comic.pstatic.net/thumb/webtoon/746285/thumbnail/thumbnail_IMAG04_476049eb-aae7-4f53-b712-920284a707b7.jpg" width="218" height="120" title="동트는 로맨스" alt="동트는 로맨스">
+                                </a>
+                            </div>
+                            <div class="genreRecomInfo2">
+                                <h6 class="title">
+                                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=746285">
+                                        <span>동트는 로맨스</span>
+                                    </a>
+                                </h6>
+                                <p>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=746285&no=51">
+                                    <span>51화</span>
+                                </a>
+                                </p>
+                                <span class="user">
+                                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=211590">
+                                        유월
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="genreRecomImg2">
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=746858">
+                                    <img src="https://shared-comic.pstatic.net/thumb/webtoon/746858/thumbnail/thumbnail_IMAG04_3d37f7e8-7d5a-4da1-b409-650558c533c1.jpg" width="218" height="120" title="이번 생도 잘 부탁해" alt="이번 생도 잘 부탁해">
+                                </a>
+                            </div>
+                            <div class="genreRecomInfo2">
+                                <h6 class="title">
+                                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=746858">
+                                        <span>이번 생도 잘 부탁해</span>
+                                    </a>
+                                </h6>
+                                <p>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=746858&no=40">
+                                    <span>40화</span>
+                                </a>
+                                </p>
+                                <span class="user">
+                                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=240059">
+                                        이혜
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="genreRecomImg2">
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=724815">
+                                    <img src="https://shared-comic.pstatic.net/thumb/webtoon/724815/thumbnail/thumbnail_IMAG04_b6e41f2a-17e0-4b9d-809c-4831ef23123d.jpg" width="218" height="120" title="아홉수 우리들" alt="아홉수 우리들">
+                                </a>
+                            </div>
+                            <div class="genreRecomInfo2">
+                                <h6 class="title">
+                                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=724815">
+                                        <span>아홉수 우리들</span>
+                                    </a>
+                                </h6>
+                                <p>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=724815&no=108&weekday=sat">
+                                    <span>107. 우리들의 여름 上</span>
+                                </a>
+                                </p>
+                                <span class="user">
+                                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=240059">
+                                        수박양
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="genreRecomImg2">
+                                <a href="https://comic.naver.com/webtoon/list.nhn?titleId=715935">
+                                    <img src="https://shared-comic.pstatic.net/thumb/webtoon/715935/thumbnail/thumbnail_IMAG04_b58c3cb4-1aee-4e61-b167-4384c06b4950.jpg" width="218" height="120" title="롤랑롤랑" alt="롤랑롤랑">
+                                </a>
+                            </div>
+                            <div class="genreRecomInfo2">
+                                <h6 class="title">
+                                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=715935">
+                                        <span>롤랑롤랑</span>
+                                    </a>
+                                </h6>
+                                <p>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=724815&no=108&weekday=sat">
+                                    <span>127화</span>
+                                </a>
+                                </p>
+                                <span class="user">
+                                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=205461">
+                                        자유
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="genreRecomBox_area">
+                    <h3 class="titleMain">
+                        
+                        <span class="Ntxt_best" id="nbw_black">베스트도전&도전</span>
+                        <span class="Ntxt_best" id="nbw_green">추천웹툰</span>
+                    </h3>
+                    <ul class="genreRecom">
+                        <li>
+                            <h4 class="subtlt3">에피소드</h4>
+                            <ul class="genreRecomList">
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=734597">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/01/04/hwang-han/thumbnail_83x9048229edb_2345_4a1d_9348_15b22371d027_00007443.JPEG" title="자작 보드게임 동아리" alt="자작 보드게임 동아리" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=734597">자작 보드게임 동아리</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=328289" class="user">hwang-han</a>
+                                        </div>
+                                        <div class="summary">자작 보드게임 만화</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 97%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.74</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=738837">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2019/12/28/mh820619/thumbnail_83x90703aa252_5317_41f8_bdf7_1ccbc7058110_00002151.JPEG" title="애포칼립스" alt="애포칼립스" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=738837">애포칼립스</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=290979" class="user">mh820619</a>
+                                        </div>
+                                        <div class="summary">좀베창궐 문명파괴</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 91%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.12</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <div class="cutTypeChal">
+                                            <span>도전</span>
+                                        </div>
+                                        <a href="https://comic.naver.com/challenge/list.nhn?titleId=757366">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2020/10/29/jumipark0112/thumbnail_83x90292bc4ff_758c_425e_b3db_7db33c0c9c85_00000605.JPEG" title="딴나라살기" alt="딴나라살기" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/challenge/list.nhn?titleId=757366">딴나라살기</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=338886" class="user">jumipark0112</a>
+                                        </div>
+                                        <div class="summary">UAE에서 살아가기</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 96%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.70</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="subtlt3">옴니버스</h4>
+                            <ul class="genreRecomList">
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=735601">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/04/11/momo7028/thumbnail_83x90ed003aa4_f4ff_4887_8f4f_650a99c04c10_00001589.JPEG" title="좀비 패밀리" alt="좀비 패밀리" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=735601">좀비 패밀리</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=328744" class="user">momo7028</a>
+                                        </div>
+                                        <div class="summary">(구)신혼좀비</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 98%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.88</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=726538">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/01/22/kez512/thumbnail_83x9041b8bc8a_6d83_4e57_aa23_26f0b0720a80_00006086.JPEG" title="아틀레냐 비바체" alt="아틀레냐 비바체" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=726538">아틀레냐 비바체</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=221684" class="user">kez512</a>
+                                        </div>
+                                        <div class="summary">치유계 개그물</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 98%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.86</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <div class="cutTypeChal">
+                                            <span>도전</span>
+                                        </div>
+                                        <a href="https://comic.naver.com/challenge/list.nhn?titleId=760138">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/02/08/kiseon999/title_thumbnail_231439_83x90.jpg" title="인화스토리" alt="인화스토리" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/challenge/list.nhn?titleId=760138">인화스토리</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=330011" class="user">kiseon999</a>
+                                        </div>
+                                        <div class="summary">인화툰</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 89%;" title="점">평점</em>
+                                            </span>
+                                            <strong>8.98</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="subtlt3">스토리</h4>
+                            <ul class="genreRecomList">
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=620732">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2019/04/17/bada5006/thumbnail_83x90c75265ca_57cc_4223_bc8d_f35ad9768ff6_00002560.JPEG" title="백일몽화원" alt="백일몽화원" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=620732">백일몽화원</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=268523" class="user">bada5006</a>
+                                        </div>
+                                        <div class="summary">매력세계관 판타지</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 97%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.70</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=739577">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2020/04/11/jung_dok/thumbnail_83x90e8fd6e44_0f2c_431b_bf28_7d3b8c7a0e74_00001477.JPEG" title="이세계 국밥 마스터" alt="이세계 국밥 마스터" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=739577">이세계 국밥 마스터</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=322076" class="user">jung_dok</a>
+                                        </div>
+                                        <div class="summary">그 돈이면 국밥먹지</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 95%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.57</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg">
+                                        <div class="cutTypeChal">
+                                            <span>도전</span>
+                                        </div>
+                                        <a href="https://comic.naver.com/challenge/list.nhn?titleId=766715">
+                                            <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/02/13/sonjeongmo132/thumbnail_83x9050530243_0c44_400e_9cba_985100f52a38_00001260.JPEG" title="조삶모사(死)" alt="조삶모사(死)" width="83" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="genreRecomInfo">
+                                        <h6 class="title">
+                                            <a href="https://comic.naver.com/challenge/list.nhn?titleId=766715">조삶모사(死)</a>
+                                        </h6>
+                                        <div>
+                                            <a href="https://comic.naver.com/artistTitle.nhn?artistId=311006" class="user">sonjeongmo132</a>
+                                        </div>
+                                        <div class="summary">낮엔살고 밤에죽는다</div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                                <em style="width: 95%;" title="점">평점</em>
+                                            </span>
+                                            <strong>9.54</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 장르별 인기 유료만화(업뎃순) -->
+                <div class="genreRecomBox_area" id="updateCompositionContent">
+                    <h3 class="titleMain">
+                        <span class="Ntxt_genre_popular" id="ngp_black">장르별</span>
+                        <span class="Ntxt_genre_popular" id="ngp_green">인기 단행본만화</span>
+                    </h3>
+                    <ul class="genreRecom">
+                        <li>
+                            <h4 class="subtlt3">
+                                <a href="https://series.naver.com/comic/categoryProductList.nhn?categoryTypeCode=genre&genreCode=99">
+                                <span>순정</span>
+                                <span class="material-icons" id="icon_arr1">
+                                    arrow_right
+                                </span>
+                                </a>
+                            </h4>
+                            <ul class="genreRecomList">
+                                <li>
+                                   <div class="genreRecomImg3">
+                                      <a href="https://series.naver.com/comic/detail.nhn?productNo=5615816">
+                                          <img src="https://comicthumb-phinf.pstatic.net/20201123_124/pocket_1606114142071aQqSv_JPEG/000.jpg?type=m80" width="80" height="100" title="남풍 속에 취하다" alt="남풍 속에 취하다">
+                                      </a> 
+                                   </div>
+                                   <div class="genreRecomInfo3">
+                                        <h6 class="title">
+                                            <a href="https://series.naver.com/comic/detail.nhn?productNo=5615816">남풍 속에 취하다</a>
+                                        </h6>
+                                        <div class="user">칠보짱</div>
+                                        <div class="summary">
+                                            <a href="https://series.naver.com/comic/detail.nhn?productNo=5615816">길거리에서 갑작스런 한번의 입맞춤으로 두사...</a>
+                                        </div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                            <em style="width: 86%;" title="8.6점">평점</em>
+                                            </span>
+                                            <strong>8.6</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg3">
+                                       <a href="https://series.naver.com/comic/detail.nhn?productNo=5013616">
+                                           <img src="https://comicthumb-phinf.pstatic.net/20200406_259/pocket_1586160848604UzwE7_JPEG/000.jpg?type=m80" width="80" height="100" title="독보다 강한 꽃" alt="독보다 강한 꽃">
+                                       </a> 
+                                    </div>
+                                    <div class="genreRecomInfo3">
+                                         <h6 class="title">
+                                             <a href="https://series.naver.com/comic/detail.nhn?productNo=5013616">독보다 강한 꽃</a>
+                                         </h6>
+                                         <div class="user">한태문화</div>
+                                         <div class="summary">
+                                             <a href="https://series.naver.com/comic/detail.nhn?productNo=5013616">특수요원의 캡틴인 영설은 잠에서 깨어나보니...</a>
+                                         </div>
+                                         <div class="rating_type">
+                                             <span class="star">
+                                             <em style="width: 83%;" title="8.3점">평점</em>
+                                             </span>
+                                             <strong>8.3</strong>
+                                         </div>
+                                     </div>
+                                 </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="subtlt3">
+                                <a href="https://series.naver.com/comic/categoryProductList.nhn?categoryTypeCode=genre&genreCode=99">
+                                <span>소년</span>
+                                <span class="material-icons" id="icon_arr2">
+                                    arrow_right
+                                </span>
+                                </a>
+                            </h4>
+                            <ul class="genreRecomList">
+                                <li>
+                                   <div class="genreRecomImg3">
+                                      <a href="https://series.naver.com/comic/detail.nhn?productNo=4635859">
+                                          <img src="https://comicthumb-phinf.pstatic.net/20191115_219/pocket_1573779269299Lan9g_JPEG/000.jpg?type=m80" width="80" height="100" title="허세로 레벨업 하기!" alt="허세로 레벨업 하기!">
+                                      </a> 
+                                   </div>
+                                   <div class="genreRecomInfo3">
+                                        <h6 class="title">
+                                            <a href="https://series.naver.com/comic/detail.nhn?productNo=4635859">허세로 레벨업 하기!</a>
+                                        </h6>
+                                        <div class="user">초앵사</div>
+                                        <div class="summary">
+                                            <a href="https://series.naver.com/comic/detail.nhn?productNo=4635859">교통사고 후 타임슬립을 하게 된 남주 서강...</a>
+                                        </div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                            <em style="width: 71%;" title="7.1점">평점</em>
+                                            </span>
+                                            <strong>7.1</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg3">
+                                       <a href="https://series.naver.com/comic/detail.nhn?productNo=3930118">
+                                           <img src="https://comicthumb-phinf.pstatic.net/20190125_268/pocket_1548409901814vPcnE_JPEG/001.jpg?type=m80" width="80" height="100" title="전직 법사" alt="전직 법사">
+                                       </a> 
+                                    </div>
+                                    <div class="genreRecomInfo3">
+                                         <h6 class="title">
+                                             <a href="https://series.naver.com/comic/detail.nhn?productNo=3930118">전직 법사</a>
+                                         </h6>
+                                         <div class="user">산균자</div>
+                                         <div class="summary">
+                                             <a href="https://series.naver.com/comic/detail.nhn?productNo=3930118">평범하기 짝이 없던 김범. 어느 날 눈을 ...</a>
+                                         </div>
+                                         <div class="rating_type">
+                                             <span class="star">
+                                             <em style="width: 83%;" title="8.3점">평점</em>
+                                             </span>
+                                             <strong>8.3</strong>
+                                         </div>
+                                     </div>
+                                 </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 class="subtlt3">
+                                <a href="https://series.naver.com/comic/categoryProductList.nhn?categoryTypeCode=genre&genreCode=99">
+                                <span>무협</span>
+                                <span class="material-icons" id="icon_arr3">
+                                    arrow_right
+                                </span>
+                                </a>
+                            </h4>
+                            <ul class="genreRecomList">
+                                <li>
+                                   <div class="genreRecomImg3">
+                                      <a href="https://series.naver.com/comic/detail.nhn?productNo=5830694">
+                                          <img src="https://comicthumb-phinf.pstatic.net/20210112_265/pocket_1610432829872Xg8Qv_JPEG/000.jpg?type=m80" width="80" height="100" title="지존중생" alt="지존중생">
+                                      </a> 
+                                   </div>
+                                   <div class="genreRecomInfo3">
+                                        <h6 class="title">
+                                            <a href="https://series.naver.com/comic/detail.nhn?productNo=5830694">지존중생</a>
+                                        </h6>
+                                        <div class="user">채화</div>
+                                        <div class="summary">
+                                            <a href="https://series.naver.com/comic/detail.nhn?productNo=5830694">주인공 진유황은 뇌광신공의 전반권을 얻어 ...</a>
+                                        </div>
+                                        <div class="rating_type">
+                                            <span class="star">
+                                            <em style="width: 82%;" title="8.2점">평점</em>
+                                            </span>
+                                            <strong>8.2</strong>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="genreRecomImg3">
+                                       <a href="https://series.naver.com/comic/detail.nhn?productNo=4554165">
+                                           <img src="https://comicthumb-phinf.pstatic.net/20210222_205/pocket_1613984738579SSL0K_JPEG/_.jpg?type=m80" width="80" height="100" title="무련전봉" alt="무련전봉">
+                                       </a> 
+                                    </div>
+                                    <div class="genreRecomInfo3">
+                                         <h6 class="title">
+                                             <a href="https://series.naver.com/comic/detail.nhn?productNo=4554165">무련전봉</a>
+                                         </h6>
+                                         <div class="user">벽가벽</div>
+                                         <div class="summary">
+                                             <a href="https://series.naver.com/comic/detail.nhn?productNo=4554165">제자들의 경쟁이 심하기로 이름난 능력지상주...</a>
+                                         </div>
+                                         <div class="rating_type">
+                                             <span class="star">
+                                             <em style="width: 86%;" title="8.6점">평점</em>
+                                             </span>
+                                             <strong>8.6</strong>
+                                         </div>
+                                     </div>
+                                 </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="aside">
+                <!-- 배너 -->
+                <div id="addiv" name="addiv" data-veta-preview="p_wtoon_home" class="asideAd">
+                    <a href="https://campaign.naver.com/healthinsurance/">
+                        <img id="addImg" src="/image/addImg.jpg" width="240" height="240" border="0" frameborder="0" scrolling="no" marginheight="0" align="center" title="광고영역">
+                    </a> 
+                </div>
+                <div class="asideButton_upload">
+                    <a href="https://comic.naver.com/mypage/myActivity.nhn" class="Nbtn_upload">
+                        <img src="/image/wt_up.PNG" width="240" height="42">
+                    </a> 
+                </div>
+                <!-- 롤링이미지 -->
+                <div class="asideRolling">
+                    <a href="https://comic.naver.com/webtoon/list.nhn?titleId=764130">
+                        <img src="https://naverwebtoon-phinf.pstatic.net/20210416_214/16185367213469a8eM_JPEG/upload_2279376457345681827.JPEG?type=p100" width="240" height="97">
+                    </a>
+                </div>
+                <!-- 인기급상승만화 -->
+                <div class="asideBox">
+                    <h4 class="asideBoxTitle">
+                        <img src="https://ssl.pstatic.net/static/comic/images/migration/common/subtlt_r_best.gif" title="인기급상승만화" alt="인기급상승만화" width="78" height="11">
+                    </h4>
+                    <div>
+                        <ul class="asideBoxTab">
+                            <li id="realTimeRankChoiceTabFavorite" class="choice">
+                                <a id="realTimeRankChoiceTabFavoriteClick" href="">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/tab_txt_favor.gif" title="인기순" alt="인기순" width="31" height="12">
+                                </a>
+                            </li>
+                            <li id="realTimeRankChoiceTabUpdate">
+                                <a id="realTimeRankChoiceTabUpdateClick" href="">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/tab_txt_update.gif" title="업데이트순" alt="업데이트순" width="52" height="12">
+                                </a>
+                            </li>
+                        </ul>
+                        <h3 id="realTimeRankBlindName" class="blind">인기순</h3>
+                        <ol id="realTimeRankFavorite" class="asideBoxRank" style="display: block;">
+                            <li class="rank01">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=597447&no=387" title="프리드로우-제384화 불법 사이트 (4)">프리드로우-제384화 불법 사이트 (4)</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank02">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=727188&no=105" title="취사병 전설이 되다-105화 : 사령관의 제안">취사병 전설이 되다-105화 : 사령관의 제안</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank03">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=762071&no=18" title="욕망일기-EP5. 1분(1)_ 씨리 몇시냐">욕망일기-EP5. 1분(1)_ 씨리 몇시냐</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank04">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="호랑이형님-2부225화 역공(逆攻)10">호랑이형님-2부225화 역공(逆攻)10</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank05">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="모죠의 일지-207화. 많이 먹어 국가 외교 사절단">모죠의 일지-207화. 많이 먹어 국가 외교 사절단</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank06">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="힙한남자-25. 힙한 실패">힙한남자-25. 힙한 실패</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank07">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="청춘 블라썸-44화: EP.2 하민의 꽃 (14)">청춘 블라썸-44화: EP.2 하민의 꽃 (14)</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank08">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="반드시 해피엔딩-1화">반드시 해피엔딩-1화</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank09">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="광장-33화">광장-33화</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+                            <li class="rank10">
+                                <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=650305&no=308" title="아홉수 우리들-107. 우리들의 여름 上">아홉수 우리들-107. 우리들의 여름 上</a>
+                                <span class="rankBox">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음" width="7" height="10">
+                                    0
+                                </span>
+                            </li>
+
+                        </ol>
+                        <ol id="realTimeRankUpdate" class="asideBoxRank" style="display:none;">
+                        </ol>
+                    </div>
+                </div>
+                <!-- 추천웹툰 -->
+                <div class="asideBox">
+                    <h4 class="asideBox">
+                        <img id="recommand_ageImg" src="https://ssl.pstatic.net/static/comic/images/migration/common/h_10.gif" width="107" height="11" alt="10대 실시간 인기만화" title="10대 실시간 인기만화">
+                        <div class="tab_nv">
+                            <a id="recommandWebtoonRankLeftTabClick" href="" class="Nico_prv">이전</a>
+                            <a id="recommandWebtoonRankRightTabClick" href="" class="Nico_nxt">다음</a>
+                        </div>
+                    </h4>
+                    <div>
+                        <ul class="asideBoxTab">
+                            <li id="recommandWebtoonRankMTabOver" class="choice">
+                                <a href="">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/tab_txt_m.png" width="21" height="11" alt="남자" tilte="남자">   
+                                </a>
+                            </li>
+                            <li id="recommandWebtoonRankWTabOver">
+                                <a href="">
+                                    <img src="https://ssl.pstatic.net/static/comic/images/migration/common/tab_txt_w.png" width="21" height="11" alt="여자" tilte="여자">   
+                                </a>
+                            </li>
+                        </ul>
+                        <h3 id="ageGenderRankBlindName" class="blind">남자</h3>
+                        <ol id="recommandWebtoonRank" class="asideBoxRank asideBoxRank2">
+                            <li id="recommandLi_0" class="rank01">
+                                <div class="thumb6">
+                                    <a id="recommand_link_0" href="https://comic.naver.com/webtoon/detail.nhn?titleId=597447&no=387" title="프리드로우">
+                                        <img src="https://shared-comic.pstatic.net/thumb/webtoon/597447/thumbnail/title_thumbnail_20131102162055_t83x90.jpg" id="recommand_thumbnail_0" width="30" height="33" alt="프리드로우">
+                                    </a>
+                                </div>
+                                <div class="rc_info">
+                                    <a id="recommand_titleName_0" href="https://comic.naver.com/webtoon/detail.nhn?titleId=597447&no=387" class="tit" title="프리드로우">프리드로우</a>
+                                    <em>
+                                        <a id="recommand_painter_0" href="#" title="전선욱">전선욱</a>
+                                    </em>
+                                    <span class="rankBox2">
+                                        <img id="recommand_img_0" src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음">
+                                        <em id="recommand_rank_0">0</em>
+                                    </span>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- 공지사항 -->
+                <div class="asideBox">
+                    <h4 class="asideBoxTitle">
+                        <img src="https://ssl.pstatic.net/static/comic/images/migration/common/subtlt_r_notice.gif" title="공지사항" alt="공지사항" width="43" height="12">
+                    </h4>
+                    <ul class="asideBoxNotice">
+                        <li>
+                            <a href="https://comic.naver.com/notice/detail.nhn?noticeId=324" title="네이버웹툰 연재 작가를 모십니다!">
+                            네이버웹툰 연재 작가를 모십니다!
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://comic.naver.com/notice/detail.nhn?noticeId=421" title="네이버 웹툰 미리보기/완결보기 컨텐츠별 이용가 관련 안내">
+                                네이버 웹툰 미리보기/완결보기 컨텐츠별 이용가 관련 안내
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://comic.naver.com/notice/detail.nhn?noticeId=451" title="2021 지상최대공모전 웹툰 부문 개최 안내">
+                                <strong>지상최대공모전 웹툰 부문 개최 안내</strong> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://comic.naver.com/notice/detail.nhn?noticeId=452" title="2021년 4월 유료화 전환 작품 안내">
+                                2021년 4월 유료화 전환 작품 안내
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://comic.naver.com/notice/detail.nhn?noticeId=457" title="[장애공지] 4/20 웹툰 내 댓글 좋아요/싫어요 수치 업데이트 지연오류(복구완료)">
+                                4/20 웹툰 내 댓글 좋아요/싫어요 수치 업데이트 장애
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="https://comic.naver.com/notice/list.nhn" class="asideBoxMore">
+                        <span class="blind">공지사항</span>
+                        더보기
+                    </a>
+                </div>
+                <!-- //공지사항 -->
+                <div class="asideBanner">
+                    <a href="https://comic.naver.com/business/proposalGuide.nhn">
+                        <img src="https://ssl.pstatic.net/static/comic/images/bnr_partnership.jpg" width="240" height="86" alt="웹툰, 웹소설 온라인 광고 판권 사업">
+                    </a>
+                </div>
+                <div class="asideBanner">
+                    <a href="https://joinus.comic.naver.com/">
+                        <img src="https://ssl.pstatic.net/static/comic/images/bnr_joinus.jpg" width="240" height="86" alt="연재 경력 작가 웹툰 차기작 제안">
+                    </a>
+                </div>
+                <div class="asideBanner">
+                    <a href="https://recruit.webtoonscorp.com/webtoon/ko/joinUs">
+                        <img src="https://ssl.pstatic.net/static/comic/images/bnr_careers.jpg" width="240" height="86" alt="웹툰 채용공고">
+                    </a>
+                </div>
+                <div class="asideButton">
+                    <a class="btn_faq" href="https://help.naver.com/support/service/main.nhn?serviceNo=799" target="_blank" title="새 창">
+                        <span class="blind">만화FQA</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <div class="naver_corp_info">
+            <ul>
+                <li>
+                    <a href="https://www.naver.com/rules/service.html">이용약관</a>
+                </li>
+                <li>
+                    <a href="https://www.naver.com/rules/privacy.html" class="privacy">개인정보처리방침</a>
+                </li>
+                <li>
+                    <a href="https://www.naver.com/rules/disclaimer.html">책임과 한계와 법적고지</a>
+                </li>
+                <li>
+                    <a href="https://help.naver.com/support/home.nhn?serviceNo=799" title="새 창">고객센터</a>
+                </li>
+                <li>
+                    <a href="/business/proposalGuide.nhn#ad">웹툰 광고 문의</a>
+                </li>
+            </ul>
+            <address>
+                <a href="https://www.navercorp.com/">
+                    <span class="naver_corp_link">
+                        <span class="blind">ⓒ NAVER CORP.</span>
+                    </span>
+                </a>
+            </address>
+        </div>
+        <div class="webtoon_corp_info">
+            <ul>
+                <li>
+                    <a href="https://www.naver.com/rules/service.html">이용약관</a>
+                </li>
+                <li>
+                    <a href="https://www.naver.com/rules/privacy.html" class="privacy">개인정보처리방침</a>
+                </li>
+                <li>
+                    <a href="https://www.naver.com/rules/disclaimer.html">책임과 한계와 법적고지</a>
+                </li>
+                <li>
+                    <a href="https://help.naver.com/support/home.nhn?serviceNo=799" title="새 창">고객센터</a>
+                </li>
+                <li>
+                    <a href="/business/proposalGuide.nhn#ad">웹툰 광고 문의</a>
+                </li>
+            </ul>
+            <address>
+                <a href="https://www.navercorp.com/">
+                    <span class="naver_corp_link">
+                        <span class="blind">ⓒ NAVER CORP.</span>
+                    </span>
+                </a>
+            </address>
+        </div>
+        <p class="copyright_law">본 콘텐츠의 저작권은 저자 또는 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p>
+    </div>
 </body>
 
 </html>

@@ -1,49 +1,1310 @@
 /* COMMON */
 body {
+    height: 100%;
+    margin: 0;
+    background: #fff;
+    text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
-    background: #ffffff;
 }
 
-.link-icons {
+a:link{
     color: #434343;
-    font-size: 12px;
+    text-decoration: none;
     cursor: pointer;
-    margin-left: 7px;
 }
 
-.bar {
-    margin-left: 7px;
+#wrap{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
 }
-/* #naver{
+
+ul, li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+iframe {
+    border: 0;
+    vertical-align: top;
+}
+
+.blind {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+[class^=Nico_]{
+    display: inline-block;
+    background: url(https://ssl.pstatic.net/static/comic/images/sp/sp_Nico.png) no-repeat;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* HEADER */
+#header{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#snb_wrap{
+    height: 37px;
+    padding: 10px 0 8px;
+    /* background: rgb(204, 162, 162); */
+}
+
+#header h1{
+    position: relative;
+    z-index: 200;
+    float: left;
+    padding: 7px 30px 0 0;
+}
+#link_naver{
     float: left;
     width: 53px;
     height: 10px;
     background-position: 0 -170px;
     margin-top: 6px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 75%;
+    color:black;
+    font-weight: bold;
 }
-
-#webtoon{
+#link_comic{
     float: left;
     width: 40px;
     height: 21px;
     background-position: -65px -170px;
     margin-left: 7px;
+    font-size: 22px;
+    font-weight: 900;
+    color:black;
+    white-space : nowrap;
 }
-
-#novel{
+.bar{
+    float: left;
+    overflow: hidden;
+    width: 1px;
+    height: 13px;
+    margin: 6px 10px 0 8px;
+    background-color: #d2d2d2;
+    line-height: 999px;
+    vertical-align: top;
+}
+#link_novel{
     float: left;
     width: 40px;
     height: 15px;
     background-position: -120px -170px;
     margin-top: 3px;
-} */
+    font-size:15px;
+    white-space : nowrap;
+    color: grey;
+    font-weight: bold;
+}
 
-
-
-/* HEADER */
-header{
-    background: rgb(199, 221, 236);
-    height: 55px;
+form{
+    display: block;
+}
+fieldset{
+    display: block;
+    border: 0;
+    border-width: 2px;
+    border-style: none;
+    
+}
+legend {
+    display: none;
+}
+#snb_wrap .snb_search_box {
+    float: left;
+    position: relative;
+    z-index: 50;
+    width: 268px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 35px 0 10px;
+    border: 1px solid #e5e5e5;
+}
+#snb_wrap .explain {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    line-height: 35px;
+    font-size: 12px;
+    color: #737373;
+}
+#snb_wrap .snb_search_box .snb_search_text {
     width: 100%;
-    position: fixed;
+    border: 0;
+    color: #737373;
+    font: 12px '돋움',Dotum,Helvetica,sans-serif;
+    -webkit-appearance: none;
+}
+#icon_search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    background: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    padding: 5px;
+    color: #979797;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#header #gnb {
+    position: absolute;
+    top: 15px;
+    right: 1px;
+    z-index: 500;
+    
+}
+#gnb ul {
+    list-style: none;
+}
+.gnb_login_li {
+    height: 23px;
+    padding: 5px 7px 0 0;
+    float: left;
+    margin-right: 2px;
+    overflow: visible;
+}
+.gnb_btn_login{
+    position: relative;
+    z-index: 100;
+    margin:0 auto;
+    color:black;
+}
+.gnb_btn_login, .gnb_bg, .gnb_bdr {
+    display: inline-block;
+    width: 46px;
+    height: 20px;
+    font-size: 12px;
+}
+.gbn_bg {
+    background-color: #fff;
+    opacity: 0.05;
+}
+.gnb_bdr {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 46px;
+    height: 20px;
+    border: 1px solid #000;
+    opacity: 0.12;
+}
+#icon_apps{
+    color: #858585;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 3px 25px 5px 3px;
+}
+.gnb_txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 20px;
+    padding-left: 1px;
+    line-height: 21px;
+    color: #666;
+    text-align: center;
+}
+
+
+.notice_info {
+    overflow: hidden;
+    position: absolute;
+    top: 56px;
+    right: 16px;
+    height: 40px;
+}
+
+.notice_info .rolling {
+    overflow: hidden;
+    max-width: 330px;
+}
+.notice_info .notice_rolling {
+    display: inline-block;
+    max-width: 330px;
+    overflow: hidden;
+    height: 100%;
+}
+.notice_info .notice_rolling li a {
+    display: block;
+    max-width: 100%;
+    color: #606060;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+#icon_notice{
+    color: #000000;
+    font-size: 15px;
+    position: relative;
+    top: 5px;
+}
+
+
+/* MENU */
+#header_wrap #menu {
+    clear: both;
+    height: 40px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+    padding: 0 10px;
+}
+
+#header_wrap #menu ul.menu {
+    width: 960px;
+    margin: 0 auto;
+}
+#header_wrap #menu ul.menu li {
+    float: left;
+    position: relative;
+}
+#header_wrap #menu ul.menu li a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 900;
+    color: black;
+}
+
+#header_wrap #menu ul.menu li.current {
+    background: #00d564;
+    margin: -1px 0;
+}
+#header_wrap #menu ul.menu li.current a {
+    height: 41px;
+    color: #fff;
+    padding-top: 1px;
+}
+#header_wrap #menu ul.menu .current .Ntxt_home {
+    background-position: 0 -20px;
+}
+
+#header_wrap #menu ul.menu li a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 13px;
+}
+#header_wrap #menu ul.menu .Ntxt_webtoon {
+    width: 24px;
+    height: 13px;
+    background-position: -20px 0;
+    margin-top: 13px;
+}
+#header_wrap #menu ul.menu .Ntxt_best_challenge {
+    width: 62px;
+    height: 13px;
+    background-position: -50px 0;
+    margin-top: 13px;
+}
+#header_wrap #menu ul.menu .Ntxt_challenge_comic {
+    width: 49px;
+    height: 13px;
+    background-position: -120px 0;
+    margin-top: 13px;
+}
+#header_wrap #menu ul.menu .Ntxt_mypage {
+    width: 60px;
+    height: 13px;
+    background-position: -180px 0;
+    margin-top: 13px;
+}
+
+#header_wrap #menu ul.menu .bar {
+    display: inline;
+    width: 1px;
+    height: 13px;
+    float: right;
+    background: #ced2d6;
+    vertical-align: top;
+    margin: 14px 0;
+}
+#header_wrap #menu ul.menu .Ntxt_short_story {
+    width: 63px;
+    height: 13px;
+    background-position: 0 -40px;
+    margin-top: 13px;
+    color: grey;
+}
+#header_wrap #menu ul.menu li.genre_novel a {
+    padding-left: 0;
+}
+#header_wrap #menu ul.menu .Ntxt_genre_novel {
+    width: 48px;
+    height: 14px;
+    background-position: -75px -40px;
+    margin-top: 13px;
+    color: grey;
+}
+
+
+/* MAINTOPAREA */
+.mainTopArea {
+    width: 960px;
+    margin: 0 auto;
+    padding: 12px 10px 14px;
+    clear: both;
+    display: block;
+    height: 252px;
+}
+.main_spot {
+    float: left;
+    font-weight: 700;
+}
+.data_area {
+    float: left;
+    width: 91px;
+    height: 250px;
+    padding: 0 5px 0 15px;
+    border: 1px solid #e5e5e5;
+    border-right: 0;
+}
+.data_area .Ntxt_today_webtoon {
+    height: 61px;
+    background-position: 0 -100px;
+    margin-top: 20px;
+    font-size: 29px;
+}
+.data_area .Ntxt_today_webtoon #tw_green{
+ color: #00d564;  
+ margin-top: 5px;  
+}
+.data_area .date {
+    margin-top: 13px;
+    letter-spacing: -0.5px;
+    color: #808285;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.data_area ul {
+    margin-top: 48px;
+    list-style: none;
+}
+.data_area li a {
+    display: block;
+    height: 22px;
+    font-size: 12px;
+    font-weight: 900;
+    color:rgb(180, 180, 180);
+}
+#listMenu li .Ntxt_popular {
+    background-position: -97px -119px;
+    width: 32px;
+    height: 12px;
+    color: #00d564;
+}
+
+.webtoon_area {
+    float: left;
+    width: 582px;
+}
+.webtoon_area .bigimg {
+    position: relative;
+}
+.webtoon_area .bigimg .bd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #000;
+    filter: alpha(opacity=10);
+    -moz-opacity: .1;
+    opacity: .1;
+}
+
+
+.webtoon_lst {
+    position: relative;
+    padding: 0 20px 0 19px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.webtoon_lst .lst_area {
+    overflow: hidden;
+    width: 539px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.webtoon_lst .lst_area li {
+    float: left;
+    width: 134px;
+    border-left: 1px solid #e5e5e5;
+}
+.webtoon_lst .lst_area li a {
+    position: relative;
+    display: block;
+    height: 57px;
+}
+.webtoon_lst .lst_area li.sel .sel_bar {
+    position: absolute;
+    z-index: 10;
+    left: -1px;
+    bottom: 0;
+    width: 136px;
+    height: 2px;
+    background: #222;
+}
+
+.btn_prev, .btn_next {
+    position: absolute;
+    top: 0;
+    height: 57px;
+}
+.btn_prev_arr, .btn_next_arr{
+    display: block;
+    margin-top: 22px;
+    font-weight: 900;
+    color:rgb(153, 153, 153);
+    font-size: 13px;
+}
+.webtoon_lst .btn_prev {
+    left: 0;
+    width: 19px;
+}
+.btn_prev_arr {
+    background-position: -175px -124px;
+    width: 7px;
+    height: 13px;
+    margin-left: 6px;
+}
+.webtoon_lst .btn_next {
+    right: 0;
+    width: 20px;
+}
+.btn_next_arr {
+    background-position: -186px -124px;
+    width: 7px;
+    height: 13px;
+    margin-left: 7px;
+}
+
+
+.todayChallenge {
+    float: right;
+    width: 202px;
+    height: 250px;
+    padding: 0 18px;
+    background: #f9f9fc;
+    border: 1px solid #ebebeb;
+}
+.todayChallenge .Ntxt_new_best {
+    height: 16px;
+    background-position: -240px -100px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 900;
+}
+.todayChallenge #nb_green{
+    color: #00d564;
+}
+
+.todayChallenge p.best_photo {
+    position: relative;
+    margin-top: 11px;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #000;
+    opacity: .1;
+    filter: alpha(opacity=10);
+}
+
+.todayChallenge dt {
+    display: block;
+    margin-top: 18px;
+    position: relative;
+    padding-right: 62px;
+    color: #434343;
+    font-weight: 900;
+}
+.todayChallenge dt .challenge_title {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #000;
+}
+.todayChallenge dt span {
+    width: 55px;
+    font-weight: normal;
+    color: #a3a3a3;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    text-align: right;
+    opacity: .85;
+    filter: alpha(opacity=85);
+    -moz-opacity: .85;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.todayChallenge dt .challenge_id {
+    color: #414141;
+    font-size: 12px;
+}
+
+.todayChallenge dd {
+    letter-spacing: -1px;
+    margin-top: 3px;
+    line-height: 18px;
+}
+.todayChallenge dd a {
+    color: #848889;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+/* container */
+#container {
+    clear: both;
+    position: relative;
+    width: 980px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 8px 0 100px;
+}
+#content {
+    float: left;
+    position: relative;
+    width: 694px;
+    padding-left: 10px;
+}
+
+/* 장르별추천웹툰 */
+.genreRecomBox {
+    overflow: hidden;
+}
+
+.genreRecomBox .titleMain {
+    padding-top: 30px;
+    position: relative;
+    padding: 26px 0 10px;
+}
+.Ntxt_genre_webtoon{
+    font-size: 15px;
+    font-weight: 900;
+    color: #434343
+}
+#ngw_green{
+    color: #00d564;
+}
+
+
+.tab_gr {
+    margin-top: 12px;
+}
+.tab_gr ul {
+    border-bottom: 1px solid #e5e5e5;
+    height: 23.33px;
+}
+.tab_gr ul li {
+    float: left;
+    padding: 0 6px;
+
+}
+
+
+.tab_gr ul li a {
+    display: inline-block;
+    font-size: 13px;
+    color: #737373;
+    padding: 0 2px 6px;
+}
+
+.tab_gr ul li .on{
+    color: #00d564;
+    font-weight: 900;
+    border-bottom: 2px solid #00d564;
+    margin-bottom: -1px;
+}
+
+.view_type {
+    overflow: hidden;
+    margin: 12px 0;
+}
+.view_type .sortby {
+    margin-top: 3px;
+    float: right;
+}
+.sortby li:first-child {
+    margin-left: 0;
+}
+.sortby li {
+    float: left;
+    margin-left: 12px;
+    font-size: 11.5px;
+    font-weight: 900;
+}
+.sortby li a {
+    display: block;
+    height: 12px;
+    color:#afafaf;
+}
+li .Ntxt_popular {
+    background-position: -97px -119px;
+    width: 32px;
+    height: 12px;
+}
+li .Ntxt_update {
+    background-position: -40px -68px;
+    width: 54px;
+    height: 12px;
+}
+li .Ntxt_count {
+    background-position: -133px -119px;
+    width: 32px;
+    height: 12px;
+}
+li.sel .Ntxt_star_rate {
+    background-position: -35px -147px;
+    color: #00d564;
+}
+
+
+ul.genreRecom {
+    overflow: hidden;
+    margin: 0 -10px;
+    padding-bottom: 17px;
+}
+
+.genreRecomBox ul.genreRecom>li {
+    height: 196px;
+}
+
+ul.genreRecom>li {
+    float: left;
+    padding: 0 10px;
+    width: 218px;
+}
+
+.genreRecomInfo2 {
+    position: relative;
+    margin-top: 11px;
+}
+div[class^=genreRecomInfo] .title {
+    font-weight: 900;
+    font-size: 12px;
+}
+.genreRecomInfo2 h6 {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.genreRecomInfo2 h6.title a {
+    display: block;
+    overflow: hidden;
+    color:#323232;
+}
+.genreRecomInfo2 h6.title a span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.genreRecomInfo2 p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 5px 0;
+    font-size:12px;
+
+}
+.genreRecomInfo2 p a{
+    color: #434343;
+}
+
+.genreRecomInfo2 .user a {
+    color: #767676;
+    font-size: 12px;
+}
+
+/* 베스트도전&도전 추천만화 */
+.genreRecomBox_area .titleMain {
+    padding-top: 30px;
+    position: relative;
+    padding: 26px 0 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.Ntxt_best{
+    font-size: 15px;
+    font-weight: 900;
+    color: #434343
+}
+#nbw_green{
+    color: #00d564;
+}
+.genreRecomBox_area ul.genreRecom {
+    padding-bottom: 33px;
+}
+h4.subtlt3 {
+    font-size: 13px;
+    color: #555;
+    margin-top: 14px;
+    font-weight: 900;
+
+}
+ul.genreRecomList {
+    overflow: hidden;
+    margin-top: 7px;
+}
+.genreRecomBox_area ul.genreRecom .genreRecomList li:first-child {
+    margin-top: 0;
+}
+.genreRecomBox_area ul.genreRecom .genreRecomList li {
+    position: relative;
+    overflow: hidden;
+}
+.genreRecomImg, .genreRecomImg3 {
+    float: left;
+}
+.genreRecomInfo {
+    float: left;
+    overflow: hidden;
+    width: 127px;
+    margin-left: 7px;
+}
+.genreRecomInfo h6.title {
+    margin: 1px 0;
+    word-break: break-all;
+}
+.genreRecomBox_area ul.genreRecom .genreRecomList li:first-child {
+    margin-top: 0;
+}
+.genreRecomBox_area ul.genreRecom .genreRecomList li {
+    position: relative;
+    margin-top: 20px;
+}
+
+.genreRecomInfo h6.title a, .genreRecomInfo a.user {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #434343;
+}
+
+.genreRecomInfo a.user{
+    font-size: 10px;
+    letter-spacing: -1px;
+}
+.genreRecomInfo .summary {
+    height: 32px;
+    margin: 10px 0 7px 0;
+    color: #434343;
+    line-height: 16px;
+    word-break: break-all;
+    font-size: 12px;
+}
+.rating_type {
+    margin-top: -2px;
+    margin-top: -1px;
+}
+.star {
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/sp_star.gif) no-repeat 0 0;
+    text-align: left;
+    vertical-align: middle;
+}
+div[class^=rating_type] .star em {
+    display: block;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/sp_star.gif) no-repeat 0 -19px;
+    text-indent: -9999px;
+}
+div[class^=rating_type] strong {
+    display: inline-block;
+    margin-left: 3px;
+    font-family: tahoma,Helvetica,Sans-serif;
+    font-size: 11px;
+    color: #606060;
+    vertical-align: middle;
+    font-weight: 900;
+}
+.cutTypeChal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 26px;
+    height: 15px;
+    background: transparent url(https://ssl.pstatic.net/static/comic/images/migration/common/ico_challenge_090326.png) no-repeat scroll left top;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+/* 장르별인기단행본만화 */
+.Ntxt_genre_popular{
+    font-size: 15px;
+    font-weight: 900;
+    color: #434343
+}
+#ngp_green{
+    color: #00d564;
+}
+
+.subtlt3 a{
+    color: #434343;
+}
+#icon_arr1, #icon_arr2, #icon_arr3{
+    color: #c0c0c0;
+    width: 3px;
+    height: 6px;
+    background-position: -270px 0;
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+    right: 3px;
+}
+.genreRecomInfo3 {
+    overflow: hidden;
+    float: left;
+    width: 121px;
+    margin: 1px 0 0 10px;
+    padding-top: 2px;
+}
+
+.genreRecomInfo3 h6.title {
+    margin-bottom: 1px;
+    padding-bottom: 4px;
+    letter-spacing: -1px;
+    font-weight: 900;
+    font-size: 12px;
+}
+.genreRecomInfo3 h6.title a{
+    color: #434343;
+    
+}
+
+.genreRecomInfo3 .user {
+    color: #767676;
+    font-size: 12px;
+}
+.genreRecomInfo3 .summary {
+    height: 32px;
+    margin: 8px 0 3px;
+    line-height: 15px;
+    letter-spacing: -1px;
+    word-break: break-all;
+}
+
+.summary a{
+    font-size: 12px;
+    color: #434343;
+}
+
+/* aside */
+#aside {
+    float: right;
+    width: 240px;
+    padding-right: 10px;
+}
+#addiv{
+    margin-top: 0px;
+}
+
+#aside div {
+    clear: both;
+    margin-top: 8px;
+}
+
+/* //롤링이미지 */
+.asideRolling {
+    position: relative;
+}
+
+.asideRolling a {
+    display: block;
+}
+
+/* //인기급상승만화 */
+.asideBox {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e1e1e1;
+}
+h4.asideBoxTitle {
+    position: relative;
+    width: 238px;
+    height: 30px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 0;
+}
+h4.asideBoxTitle img {
+    margin: 9px 0 0 12px;
+}
+ul.asideBoxTab {
+    float: none;
+    width: 240px;
+}
+
+
+ul.asideBoxTab li {
+    float: left;
+    width: 119px;
+    height: 30px;
+    margin-left: -1px;
+    border-left: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+
+}
+
+ul.asideBoxTab li.choice {
+    border-bottom: 0;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/arrow_down_5x3_1.gif) no-repeat 50% 26px;
+}
+
+ul.asideBoxTab li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ul.asideBoxTab li img {
+    margin-top: 9px;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+ol.asideBoxRank {
+    position: relative;
+    padding: 15px 0 7px;
+    zoom: 1;
+    list-style: decimal;
+}
+
+ol.asideBoxRank li {
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 7px 13px;
+    padding: 0 55px 0 19px;
+    zoom: 1;
+    list-style: decimal;
+}
+
+ol.asideBoxRank li.rank01{
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn1.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank02 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn2.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank03 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn3.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank04 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn4.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank05 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn5.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank06 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn6.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank07 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn7.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank08 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn8.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank09 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn9.gif) no-repeat left top;
+}
+ol.asideBoxRank li.rank10 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn10.gif) no-repeat left top;
+}
+
+ol.asideBoxRank li a {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    color: #434343;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    font-size:12px;
+}
+
+
+ol.asideBoxRank li .rankBox {
+    position: absolute;
+    top: 1px;
+    left: 182px;
+    width: 30px;
+    font-size: 10px;
+    color: #434343;
+    text-align: right;
+}
+ol.asideBoxRank li .rankBox img {
+    float: left;
+    margin: 0 0 2px;
+    vertical-align: bottom;
+}
+
+/* 추천웹툰 */
+h4.asideBoxTitle .tab_nv {
+    position: absolute;
+    top: 6px;
+    right: 7px;
+}
+h4.asideBoxTitle .tab_nv .Nico_prv {
+    width: 17px;
+    height: 18px;
+    background-position: -285px 0;
+}
+h4.asideBoxTitle .tab_nv .Nico_nxt {
+    width: 18px;
+    height: 18px;
+    background-position: -302px 0;
+}
+ul.asideBoxTab {
+    float: none;
+    width: 240px;
+}
+ul.asideBoxTab li {
+    float: left;
+    width: 119px;
+    height: 30px;
+    margin-left: -1px;
+    border-left: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+}
+ul.asideBoxTab li.choice {
+    border-bottom: 0;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/arrow_down_5x3_1.gif) no-repeat 50% 26px;
+}
+ul.asideBoxTab li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ul.asideBoxTab li img {
+    margin-top: 9px;
+}
+
+ol.asideBoxRank {
+    position: relative;
+    padding: 15px 0 7px;
+    zoom: 1;
+    list-style: decimal;
+}
+ol.asideBoxRank li.rank01 {
+    background: url(https://ssl.pstatic.net/static/comic/images/2012/no_gn1.gif) no-repeat left top;
+}
+ol.asideBoxRank2 li {
+    margin: 0 0 5px 13px!important;
+}
+ol.asideBoxRank li .thumb6 {
+    float: left;
+    position: relative;
+    padding-left: 1px;
+}
+ol.asideBoxRank li a {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    color: #434343;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+}
+ol.asideBoxRank li .thumb6 img {
+    display: block;
+}
+
+ol.asideBoxRank li .rc_info {
+    float: left;
+    width: 110px;
+    padding: 2px 0 0 9px;
+    line-height: 15px;
+}
+ol.asideBoxRank li .rc_info .tit {
+    display: block;
+    overflow: hidden;
+    color: #434343;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ol.asideBoxRank li .rc_info em {
+    display: block;
+    font-style: normal;
+}
+ol.asideBoxRank li .rc_info em a {
+    font-size: 11px;
+    color: #767676;
+}
+ol.asideBoxRank li .rankBox2 {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    width: 30px;
+    font-size: 10px;
+    color: #434343;
+    text-align: right;
+}
+ol.asideBoxRank li .rankBox2 img {
+    float: left;
+    margin: 0;
+    vertical-align: middle;
+}
+ol.asideBoxRank li .rankBox2 em {
+    margin: -2px 0 2px;
+    *margin: -3px 0 3px;
+    font-style: normal;
+    vertical-align: middle;
+}
+
+/* 공지사항 */
+.asideBoxNotice {
+    padding: 10px 0 5px 12px;
+}
+.asideBoxNotice li {
+    padding: 2px 5px 6px 7px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/bu_squea.gif) no-repeat 0 50%;
+}
+.asideBoxNotice li a {
+    display: block;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #434343
+    
+}
+
+.asideBoxMore {
+    position: absolute;
+    top: 12px;
+    right: 11px;
+    padding-left: 7px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/arrow_3x5.gif) no-repeat left 2px;
+    font-size: 11px;
+    color: #767676;
+}
+
+/* //공지사항 */
+
+
+.asideButton {
+    border: 1px solid #e1e1e1;
+}
+
+.asideButton .btn_faq {
+    display: block;
+    height: 32px;
+    background: url(https://ssl.pstatic.net/static/comic/images/sp_aside_txt.png) no-repeat 93px 11px;
+}
+
+
+/* footer */
+#footer {
+    width: 960px;
+    margin: 0 auto;
+    clear: both;
+    padding: 40px 10px 78px;
+    border-top: 1px solid #e6e7e8;
+}
+#footer .naver_corp_info {
+    float: left;
+    width: 490px;
+}
+#footer * {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-style: normal;
+    font-family: '나눔고딕',NanumGothic,'돋움',Dotum,Helvetica,Sans-serif;
+    line-height: normal;
+    color: #333132;
+    list-style: none;
+}
+
+#footer ul li:first-child {
+    padding-left: 0;
+}
+#footer ul li {
+    position: relative;
+    float: left;
+    padding: 0 8px 0 9px;
+}
+#footer .privacy {
+    font-weight: bold;
+}
+
+
+#footer address {
+    margin-top: 13px;
+}
+#footer .naver_corp_link {
+    display: inline-block;
+    width: 84px;
+    height: 10px;
+    background: url(https://ssl.pstatic.net/static/comic/images/navercorp_v2.png) no-repeat;
+    vertical-align: top;
+}
+#footer .copyright_law {
+    clear: both;
+    padding-top: 32px;
+    color: #8a8c8e;
+}
+
+#footer .webtoon_corp_info {
+    float: left;
+    position: relative;
+    width: 444px;
+    padding-left: 26px;
 }
