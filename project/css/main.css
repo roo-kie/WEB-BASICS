@@ -1272,6 +1272,11 @@ ol.asideBoxRank li .rankBox2 em {
     color: #333132;
     list-style: none;
 }
+#footer a {
+    color: #333132;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
 
 #footer ul li:first-child {
     padding-left: 0;
@@ -1307,4 +1312,11 @@ ol.asideBoxRank li .rankBox2 em {
     position: relative;
     width: 444px;
     padding-left: 26px;
+}
+#footer .webtoon_corp_link {
+    display: inline-block;
+    width: 154px;
+    height: 10px;
+    background: url(https://ssl.pstatic.net/static/comic/images/webtoonlimited.png) no-repeat;
+    vertical-align: top;
 }
