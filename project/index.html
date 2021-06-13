@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <!-- main.css -->
     <link rel="stylesheet" href="./css/main.css"/>
+    <!--main.js -->
+    <script async src="./js/main.js"></script>
 </head>
 
 <body>
@@ -44,7 +46,11 @@
                             <span class="material-icons" id="icon_apps">
                                 apps
                             </span>
+                            <div class="gnb_service_lyr" id="gnb_service_lyr" style="display: none;">
+                                <img src="/image/gnb_service_lyr.PNG" width="301" height="395">
+                            </div>
                         </li>
+                        
                     </ul>
                 </div>
                 <!-- 사이드메뉴 -->
@@ -139,7 +145,7 @@
         </div> 
         <!-- 상단메인 -->
         <div class="mainTopArea">
-            <div class="main_spot">
+            <div class="main_spot" id="mainNavi">
                 <div class="data_area">
                     <h2 class="Ntxt_today_webtoon">
                         <p id="tw_black">오늘의</p>
@@ -171,44 +177,82 @@
                 </div>
                 <div class="webtoon_area">
                     <div class="bigimg">
-                        <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=748105&no=84&weekday=sun" class="_bigImgLink">
-                            <img src="/image/bigImg.PNG" width="582" height="195" alt="자까 작가의 나도 혼자 산다" class="_bigImg">
-                            <span class="bd"></span>
-                        </a>
+                        <div class="slide slide1">
+                            <div class="slide__content">
+                                <span class="bd">s1</span>
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div class="slide__content">
+                                <span class="bd">s2</span>
+                            </div>
+                        </div>
+                        <div class="slide slide3">
+                            <div class="slide__content">
+                                <span class="bd">s3</span>
+                            </div>
+                        </div>
+                        <div class="slide slide4">
+                            <div class="slide__content">
+                                <span class="bd">s4</span>
+                            </div>
+                        </div>
+                        <div class="slide slide5">
+                            <div class="slide__content">
+                                <span class="bd">s5</span>
+                            </div>
+                        </div>
+                        <div class="slide slide6">
+                            <div class="slide__content">
+                                <span class="bd">s6</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="webtoon_lst">
                         <div class="lst_area">
-                            <ul id="comicList" style="margin-left: 0px; width: 7695px;">
-                                <li class="sel">
-                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=748105&no=84&weekday=sun" class="item">
-                                        <img src="/image/list1.jpg" width="134" height="56" >
+                            <ul class="comicList" style="margin-left: 0px; width: 7695px;">
+                                <li>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=716857&no=341&weekday=thu" class="item">
+                                        <img src="https://image-comic.pstatic.net/webtoon/716857/thumbnail/thumbnail_IMAG03_00192024-96cd-4601-b4ba-4743c2da5490.jpg" width="134" height="56" >
                                         <span class="sel_bar"></span>
                                     </a>    
                                 </li>
                                 <li>
-                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=736277&no=75&weekday=sun" class="item">
-                                        <img src="/image/list2.jpg" width="134" height="56">
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=738173&no=77&weekday=thu" class="item">
+                                        <img src="https://image-comic.pstatic.net/webtoon/738173/thumbnail/thumbnail_IMAG03_13972cbe-244f-4197-b9e5-b53b483212fb.jpg" width="134" height="56">
                                     </a>    
                                 </li>
                                 <li>
-                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=710751&no=136&weekday=sun" class="item">
-                                        <img src="/image/list3.jpg" width="134" height="56" >
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=740487&no=58&weekday=thu" class="item">
+                                        <img src="https://image-comic.pstatic.net/webtoon/740487/thumbnail/thumbnail_IMAG03_5db6d641-fb7f-4a94-b893-29260442a295.jpg" width="134" height="56" >
                                     </a>    
                                 </li>
                                 <li>
-                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=670152&no=274&weekday=sun" class="item">
-                                        <img src="/image/list4.jpg" width="134" height="56" >
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=570503&no=357&weekday=thu" class="item">
+                                        <img src="https://image-comic.pstatic.net/webtoon/570503/thumbnail/thumbnail_IMAG03_87345f7d-8476-4c39-a549-53ca9029f8fb.jpg" width="134" height="56" >
+                                    </a>    
+                                </li>
+                                <li>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=731930&no=76&weekday=thu" class="item">
+                                        <img src="https://image-comic.pstatic.net/webtoon/731930/thumbnail/thumbnail_IMAG03_f842bf76-3e62-42d0-b56f-2477ed281aaf.jpg" width="134" height="56" >
+                                    </a>    
+                                </li>
+                                <li>
+                                    <a href="https://comic.naver.com/webtoon/detail.nhn?titleId=748105&no=97&weekday=thu" class="item">
+                                        <img src="https://image-comic.pstatic.net/webtoon/748105/thumbnail/thumbnail_IMAG03_aad77435-78a8-4095-968f-43a05df08569.jpg" width="134" height="56" >
                                     </a>    
                                 </li>
                             </ul>
-                            <a href="" class="btn_prev">
+                            <div class="btn_prev">
                                 <span class="btn_prev_arr">&lt;</span>
-                            </a>
-                            <a href="" class="btn_next">
+                            </div>
+                            <div class="btn_next">
                                 <span class="btn_next_arr">&gt;</span>
-                            </a>
+                            </div>
+                          
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="todayChallenge">
@@ -1016,6 +1060,7 @@
                                 <div class="thumb6">
                                     <a id="recommand_link_0" href="https://comic.naver.com/webtoon/detail.nhn?titleId=597447&no=387" title="프리드로우">
                                         <img src="https://shared-comic.pstatic.net/thumb/webtoon/597447/thumbnail/title_thumbnail_20131102162055_t83x90.jpg" id="recommand_thumbnail_0" width="30" height="33" alt="프리드로우">
+                                        <span class="mask"></span>
                                     </a>
                                 </div>
                                 <div class="rc_info">
@@ -1026,6 +1071,78 @@
                                     <span class="rankBox2">
                                         <img id="recommand_img_0" src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음">
                                         <em id="recommand_rank_0">0</em>
+                                    </span>
+                                </div>
+                            </li>
+                            <li id="recommandLi_1" class="rank02">
+                                <div class="thumb6">
+                                    <a id="recommand_link_1" href="/webtoon/detail.nhn?titleId=758150&no=33" title="입학용병">
+                                        <img src="https://shared-comic.pstatic.net/thumb/webtoon/758150/thumbnail/thumbnail_IMAG10_c03df7c9-dbf3-4314-8699-04ce77fb4444.jpg" id="recommand_thumbnail_1" width="30" height="33" alt="입학용병">
+                                        <span class="mask"></span>
+                                    </a>
+                                </div>
+                                <div class="rc_info">
+                                    <a id="recommand_titleName_1" href="/webtoon/detail.nhn?titleId=758150&no=33" class="tit" title="입학용병">입학용병</a>
+                                    <em>
+                                        <a id="recommand_painter_1" href="#" title="락현">락현</a>
+                                    </em>
+                                    <span class="rankBox2">
+                                        <img id="recommand_img_1" src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음">
+                                        <em id="recommand_rank_1">0</em>
+                                    </span>
+                                </div>
+                            </li>
+                            <li id="recommandLi_2" class="rank03">
+                                <div class="thumb6">
+                                    <a id="recommand_link_2" href="/webtoon/detail.nhn?titleId=758150&no=33" title="입학용병">
+                                        <img src="https://shared-comic.pstatic.net/thumb/webtoon/758150/thumbnail/thumbnail_IMAG10_c03df7c9-dbf3-4314-8699-04ce77fb4444.jpg" id="recommand_thumbnail_2" width="30" height="33" alt="입학용병">
+                                        <span class="mask"></span>
+                                    </a>
+                                </div>
+                                <div class="rc_info">
+                                    <a id="recommand_titleName_2" href="/webtoon/detail.nhn?titleId=758150&no=33" class="tit" title="입학용병">입학용병</a>
+                                    <em>
+                                        <a id="recommand_painter_2" href="#" title="락현">락현</a>
+                                    </em>
+                                    <span class="rankBox2">
+                                        <img id="recommand_img_2" src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음">
+                                        <em id="recommand_rank_2">0</em>
+                                    </span>
+                                </div>
+                            </li>
+                            <li id="recommandLi_3" class="rank04">
+                                <div class="thumb6">
+                                    <a id="recommand_link_3" href="/webtoon/detail.nhn?titleId=758150&no=33" title="입학용병">
+                                        <img src="https://shared-comic.pstatic.net/thumb/webtoon/758150/thumbnail/thumbnail_IMAG10_c03df7c9-dbf3-4314-8699-04ce77fb4444.jpg" id="recommand_thumbnail_3" width="30" height="33" alt="입학용병">
+                                        <span class="mask"></span>
+                                    </a>
+                                </div>
+                                <div class="rc_info">
+                                    <a id="recommand_titleName_3" href="/webtoon/detail.nhn?titleId=758150&no=33" class="tit" title="입학용병">입학용병</a>
+                                    <em>
+                                        <a id="recommand_painter_3" href="#" title="락현">락현</a>
+                                    </em>
+                                    <span class="rankBox2">
+                                        <img id="recommand_img_3" src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음">
+                                        <em id="recommand_rank_3">0</em>
+                                    </span>
+                                </div>
+                            </li>
+                            <li id="recommandLi_4" class="rank05">
+                                <div class="thumb6">
+                                    <a id="recommand_link_4" href="/webtoon/detail.nhn?titleId=758150&no=33" title="입학용병">
+                                        <img src="https://shared-comic.pstatic.net/thumb/webtoon/758150/thumbnail/thumbnail_IMAG10_c03df7c9-dbf3-4314-8699-04ce77fb4444.jpg" id="recommand_thumbnail_4" width="30" height="33" alt="입학용병">
+                                        <span class="mask"></span>
+                                    </a>
+                                </div>
+                                <div class="rc_info">
+                                    <a id="recommand_titleName_4" href="/webtoon/detail.nhn?titleId=758150&no=33" class="tit" title="입학용병">입학용병</a>
+                                    <em>
+                                        <a id="recommand_painter_4" href="#" title="락현">락현</a>
+                                    </em>
+                                    <span class="rankBox2">
+                                        <img id="recommand_img_4" src="https://ssl.pstatic.net/static/comic/images/migration/common/arrow_no.gif" title="변동없음" alt="변동없음">
+                                        <em id="recommand_rank 4">0</em>
                                     </span>
                                 </div>
                             </li>
