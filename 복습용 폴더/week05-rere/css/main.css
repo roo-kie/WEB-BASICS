@@ -1,0 +1,17 @@
+/* COMMON */
+body{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 35px;
+    font-weight: 400px;
+    line-height: 1.4;
+    background: rgb(230, 235, 241);
+}
+
+/* HEADER */
+
+header {
+    background: rgb(98, 114, 167);
+    height: 65px;
+    width: 100%;
+    position: fixed;
+}
